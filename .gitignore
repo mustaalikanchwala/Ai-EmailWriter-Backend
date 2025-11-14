@@ -52,3 +52,6 @@ Thumbs.db
 ### Environment Variables (if using .env files) ###
 .env
 .env.local
+
+# Docker
+.dockerignore
