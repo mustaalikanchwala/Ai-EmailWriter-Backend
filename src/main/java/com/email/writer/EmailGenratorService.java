@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
+import java.time.Duration;
+
 @Service
 public class EmailGenratorService {
     private final WebClient webClient;
@@ -43,6 +45,7 @@ public class EmailGenratorService {
                 .bodyValue(requestBody)
                 .retrieve()
                 .bodyToMono(String.class)
+                .timeout(Duration.ofSeconds(60))
                 .block();
 //        Extract Response
         return extractResponseContent(response);
