@@ -62,5 +62,93 @@ Content-Type: application/json
 **Sample Response**
 
 
-> Adjust folder/module names to match your actual code layout.
+Subject: Re: Hope you're well!
+
+Hi [Sender's Name, if you know it, otherwise use "Hi there"],
+
+Thanks for checking in! I'm doing well, thank you for asking.
+
+I'm currently focused on a few projects here at work, keeping busy! What about you? How have things been on your end?
+
+Hope you're having a great week!
+
+All the best,
+
+Shubham
+[Your Title/Role, if applicable]
+[Your Company, if applicable]
+
+
+
+- `tone` can be values like `professional`, `friendly`, `casual`, etc., which are passed into the Gemini prompt. [web:28][web:30]
+- Response is designed to be pasted directly into an email composer in the frontend.
+
+If you support multiple endpoints (like health checks, ping, or version), list them briefly here.
+
+---
+
+## 🔒 Configuration & Environment
+
+Create an `application.properties` or `application.yml` in `src/main/resources` and configure:
+
+server.port=8080
+
+gemini.api.url=<GEMINI_ENDPOINT_URL>
+gemini.api.key=${GEMINI_API_KEY}
+
+
+Recommended:
+
+- Use **environment variables** or a `.env`‑style approach when deploying (Render, Railway, etc.).  
+- Never commit your actual Gemini API key to Git. [web:28][web:32]
+
+---
+
+## 🚀 Running the Backend Locally
+
+1. **Clone the repository**
+git clone https://github.com/mustaalikanchwala/Ai-EmailWriter-Backend.git
+cd Ai-EmailWriter-Backend
+
+
+2. **Configure Gemini credentials**
+
+- Add your Gemini URL and API key in `application.properties` or as environment variables. [web:28][web:32]
+
+3. **Build & run (Maven)**
+mvn spring-boot:run
+
+## 🛠 Tech Stack
+
+- **Language**: Java  
+- **Framework**: Spring Boot  
+- **AI Integration**: Google Gemini (via HTTP client / REST template / WebClient) [web:31][web:32]  
+- **Build Tool**: Maven  
+- **Deployment Target**: Render or any Java‑friendly PaaS (Heroku alternatives, etc.) [attached_file:1]
+
+This stack clearly demonstrates your skills in **modern Java backend + LLM integration**, which is very attractive for backend and AI‑adjacent roles. [web:28][web:31]
+
+---
+
+## 🎯 What This Project Showcases About Me
+
+- Ability to design and implement a **real backend service** used by a production‑style frontend.  
+- Hands‑on experience integrating **large language models (LLMs)** into a Spring Boot application. [web:25][web:31][web:32]  
+- Understanding of **API design, configuration management, and deployment‑ready structure**.  
+- Curiosity and initiative to go beyond basic CRUD and build something that genuinely improves productivity.
+
+---
+
+## 📬 Future Enhancements (Optional)
+
+If you plan to extend the backend later, you can mention ideas like:
+
+- Multiple tones/presets (formal, friendly, assertive, empathetic).  
+- Email thread awareness (providing previous messages for more contextual replies). [web:31]  
+- Rate limiting and authentication for multi‑user usage.  
+- Logging and observability for monitoring usage and performance.
+
+---
+
+> This backend is part of a larger **AI Email Writer** system, demonstrating how to connect a modern Spring Boot API with Google Gemini to solve a real, everyday problem: writing better emails, faster.
 
